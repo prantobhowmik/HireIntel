@@ -34,8 +34,8 @@ CRITICAL INSTRUCTIONS:
 4. BE ACCURATE: Only match skills that are explicitly stated in the resume.
 
 INPUT DATA:
-- JOB TITLE: {job_title}
-- COMPANY: {company_name}
+- JOB TITLE: {job_title if job_title and job_title.lower() != 'unknown' else 'Not Provided'}
+- COMPANY: {company_name if company_name and company_name.lower() != 'unknown' else 'Not Provided'}
 - RESUME: 
 {resume_text}
 - JOB DESCRIPTION: 
@@ -60,6 +60,8 @@ EMAIL RULES:
 - Use double newlines (\\n\\n) for paragraphs.
 - Tone: Professional and confident.
 - Signature: MUST use the candidate's name found at the top of the resume. NEVER use a name from the address line.
+- NO PLACEHOLDERS: NEVER use text in brackets like [Company Name], [Date], or any other placeholders.
+- READY TO SEND: The email must be ready to send immediately. If the COMPANY or JOB TITLE is "Not Provided", do NOT mention them. Instead of "joining [Company Name]", say "joining the team" or focus on the value you bring to the role.
 """
     
     try:
