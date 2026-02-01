@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+strawberry-graphql[fastapi]
+google-cloud-firestore
+firebase-admin
+python-dotenv
+httpx
+pydantic
+openai
+pypdf
+python-multipart
